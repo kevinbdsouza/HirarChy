@@ -2,8 +2,10 @@ import torch
 from config import Config
 from model import SeqLSTM
 from data_utils import save_processed_data
+import os
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+os.chdir("/home/kevindsouza/Documents/projects/PhD/HirarChy/src")
 
 
 def train_model(cfg):

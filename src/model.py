@@ -258,10 +258,10 @@ class SeqLSTM(nn.Module):
                         "save model"
                         torch.save(self.state_dict(), cfg.model_dir + self.model_name + '.pth')
 
-                    epoch_loss += chr_loss
-                    print('\nchr %s loss %s' % (chr, chr_loss/len(batch_indices)))
+                    epoch_loss += chr_loss / len(batch_indices)
+                    print('\nchr %s loss %s' % (chr, chr_loss / len(batch_indices)))
 
-            print('\nepoch %s loss %s' % (epoch, epoch_loss/len(cfg.chr_train_list)))
+            print('\nepoch %s loss %s' % (epoch, epoch_loss / len(cfg.chr_train_list)))
 
     def test(self):
         """

@@ -3,6 +3,9 @@ import pandas as pd
 import torch
 import torch.utils.data
 from config import Config
+import os
+
+os.chdir("/home/kevindsouza/Documents/projects/PhD/HirarChy/src")
 
 
 def get_cumpos(cfg, chr_num):
