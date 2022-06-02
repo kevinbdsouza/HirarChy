@@ -245,6 +245,8 @@ def save_batches(cfg, cum_idx, values, cum_pos, chr):
                 batch_pairs = []
                 batch_values = []
 
+    full_pairs = np.array(full_pairs, dtype=object)
+    full_values = np.array(full_values, dtype=object)
     np.save(cfg.processed_data_dir + "full_pairs_%s.npy" % chr, full_pairs)
     np.save(cfg.processed_data_dir + "full_values_%s.npy" % chr, full_values)
 
